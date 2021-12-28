@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup API</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right,rgba(182, 31, 31, 0.89),violet);
+        }
+    </style>
+</head>
+<body>
+    <script src="script.js"></script>
+    <!--<script>
+        var board=document.createElement('div');
+        
+        board.style.width="1500px";
+        board.style.display="flex";
+        board.style.flexDirection="row";
+        board.style.flexWrap="wrap";
+        board.style.backgroundColor="rgb(255,248,220)";
+
+
+        
+        fetch("http://makeup-api.herokuapp.com/api/v1/products.json")
+        .then(function(data){
+            return data.json();
+        })
+        .then(function(dataObj){
+            //console.log(dataObj);
+        
+
+         for(let i=0; i<dataObj.length; i++){
+            
+            var box=document.createElement('div');
+            box.style.height="450px";
+            box.style.width="290px";
+            box.style.marginRight="10px";
+            box.style.marginBottom="20px";
+            box.style.marginLeft="15px";
+            box.style.align="center";
+            box.style.borderRadius="0.25em";
+            box.style.backgroundColor="#FFFFFF";   //#DEDEDE
+            box.style.border="1px solid white";
+            
+            board.appendChild(box);
+            document.body.appendChild(board);
+
+            var img=document.createElement('img');
+           img.setAttribute("src",dataObj[i].api_featured_image);
+           img.style.width="290px";
+           img.style.height="150px";
+           img.style.border="1px solid white";
+           img.style.position="absolute";
+           box.appendChild(img);
+
+            var brand=document.createElement('brand');
+            brand.innerText=dataObj[i].brand;
+            brand.style.width="240px";
+            brand.style.position="absolute";
+            brand.style.marginTop="150px";
+            brand.style.fontSize="13px";
+            box.appendChild(brand);
+
+            var name=document.createElement('name');
+            name.innerText=dataObj[i].name;
+            name.style.width="250px";
+            name.style.position="absolute";
+            name.style.marginTop="170px";
+            name.style.fontSize="13px";
+            box.appendChild(name);
+
+            var price=document.createElement('price');
+            price.innerText=dataObj[i].price_sign+ "" +dataObj[i].price;
+            price.style.width="270px";
+            price.style.position="absolute";
+            price.style.marginTop="200px";
+            price.style.fontSize="13px";
+            box.appendChild(price);
+            
+            var a=document.createElement('a');
+            a.setAttribute("href",dataObj[i].product_link);
+            a.innerText=dataObj[i].product_link;
+            a.style.width="280px";
+            a.style.position="absolute";
+            a.style.marginTop="220px";
+            a.style.wordBreak="break-all";
+            a.style.fontSize="13px";
+            box.appendChild(a);
+
+            var description=document.createElement('div');
+            description.innerText=dataObj[i].description;
+            description.style.width="280px";
+            description.style.position="absolute";
+            description.style.marginTop="295px";
+            description.style.fontSize="7px";
+            description.style.textAlign="justify";
+            description.style.whiteSpace="nowrap";
+            description.style.overflow="hidden";
+            description.textOverflow="ellipsis";
+            box.appendChild(description);
+
+           
+          
+          
+         }
+        }).catch(error)
+    </script>
+-->
+</body>
+</html>
